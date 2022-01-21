@@ -9,7 +9,7 @@
 
 ## ESLint 和 Prettier 的冲突
 
-## 测试
+## 测试 add
 
 之前是只下载 [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) 这个插件，并在 `.eslintrc.js` 中的配置如下：
 
