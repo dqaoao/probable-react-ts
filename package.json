@@ -2,6 +2,12 @@
   "name": "probable-react-ts",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint-eslint && npm run lint-stylelint",
+    "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
+    "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss}",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -19,13 +25,24 @@
       "prettier --write"
     ]
   },
-  "repository": "git@github.com:dqcmcc/probable-react-ts.git",
-  "author": "dqdcma <dqcmcc@gmail.com>",
-  "license": "MIT",
-  "description": "react+ts-xuexi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dqcmcc/probable-react-ts.git"
+  },
+  "keywords": [
+    "react-project",
+    "typescript-project",
+    "react-typescript",
+    "react-ts-quick-starter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dqcmcc/probable-react-ts/issues"
+  },
+  "homepage": "https://github.com/dqcmcc/probable-react-ts#readme",
+  "description": "项目框架react+typeScript",
   "devDependencies": {
-    "@commitlint/cli": "^16.0.3",
-    "@commitlint/config-conventional": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "conventional-changelog-cli": "^2.2.2",
@@ -47,15 +64,6 @@
     "stylelint-config-standard": "^24.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
     "stylelint-order": "^5.0.0",
-    "typescript": "^4.5.4",
-    "webpack": "^5.66.0",
-    "webpack-cli": "^4.9.1"
-  },
-  "scripts": {
-    "lint": "eslint src --ext .ts --ext .tsx --fix",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "build": "webpack --config ./scripts/config/webpack.common.js",
-    "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js src",
-    "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss}"
+    "typescript": "^4.5.4"
   }
 }
