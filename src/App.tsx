@@ -12,7 +12,7 @@ function App(props: IProps) {
   return (
     <div className='app'>
       <Header />
-      <span>{`测试`}</span>
+      <span>{`测试${name + age}`}</span>
     </div>
   );
 }
